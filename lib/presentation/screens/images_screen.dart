@@ -64,7 +64,10 @@ class _ImagesScreenState extends State<ImagesScreen> {
       physics: const ClampingScrollPhysics(),
       itemCount: allImages?.length,
       itemBuilder: (ctx, index) {
-        return Card(
+        return ImageItem(image: allImages?[index]);
+
+
+        /*Card(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(8.0))),
             child: ClipRRect(
@@ -75,7 +78,7 @@ class _ImagesScreenState extends State<ImagesScreen> {
                 child: Image.network(
                   allImages![index].urls?.thumb ?? "",
                   fit: BoxFit.cover,
-                )));
+                )));*/
       },
     );
   }
